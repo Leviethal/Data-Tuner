@@ -29,10 +29,12 @@ def _auto_strategy(df: pd.DataFrame, col: str) -> str:
     missing_ratio = _missing_ratio(df, col)
     if col_type == "numeric":
         if missing_ratio < 10:
-            return "mean"
-        if missing_ratio < 30:
+            return "mean"       
+        elif missing_ratio < 25:
+            return "median"     
+        elif missing_ratio < 40:
             return "knn"
-        return "random_forest"
+        return "random_forest" 
     else:
         if missing_ratio < 20:
             return "mode"

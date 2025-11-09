@@ -1,0 +1,55 @@
+=== Running Imputation Test for 'diabetes.csv' ===
+
+Loaded dataset: (768, 9)
+Introduced missing values (~60.0% cells).
+Columns to impute: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
+Imputing 'Pregnancies' (numeric, missing: 42.84%) using 'random_forest'
+Imputing 'Glucose' (numeric, missing: 45.57%) using 'random_forest'
+Imputing 'BloodPressure' (numeric, missing: 44.40%) using 'random_forest'
+Imputing 'SkinThickness' (numeric, missing: 43.62%) using 'random_forest'
+Imputing 'Insulin' (numeric, missing: 43.23%) using 'random_forest'
+Imputing 'BMI' (numeric, missing: 48.96%) using 'random_forest'
+Imputing 'DiabetesPedigreeFunction' (numeric, missing: 48.18%) using 'random_forest'
+Imputing 'Age' (numeric, missing: 43.23%) using 'random_forest'
+Imputing 'Outcome' (numeric, missing: 44.79%) using 'random_forest'
+Imputation complete.
+Pregnancies                 random_forest -> fallback:mean
+Glucose                     random_forest -> fallback:mean
+BloodPressure               random_forest -> fallback:mean
+SkinThickness               random_forest -> fallback:mean
+Insulin                     random_forest -> fallback:mean
+BMI                         random_forest -> fallback:mean
+DiabetesPedigreeFunction    random_forest -> fallback:mean
+Age                         random_forest -> fallback:mean
+Outcome                     random_forest -> fallback:mean
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+Pregnancies: 1.2050
+Glucose: 11.3937
+BloodPressure: 5.7664
+SkinThickness: 6.0243
+Insulin: 37.4128
+BMI: 2.8559
+DiabetesPedigreeFunction: 0.1204
+Age: 4.2902
+Outcome: 0.2033
+
+=== Accuracy (%) per Categorical Column ===
+No categorical columns found or no missing values introduced.
+
+=== Mean values after imputation ===
+Pregnancies                   3.740319
+Glucose                     119.935407
+BloodPressure                67.885246
+SkinThickness                19.762125
+Insulin                      81.651376
+BMI                          31.436224
+DiabetesPedigreeFunction      0.455704
+Age                          33.022936
+Outcome                       0.358491
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'diabetes_0.6.txt'
+

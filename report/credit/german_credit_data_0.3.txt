@@ -1,0 +1,53 @@
+=== Running Imputation Test for 'german_credit_data.csv' ===
+
+Loaded dataset: (1000, 10)
+Introduced missing values (~30.0% cells).
+Columns to impute: ['Unnamed: 0', 'Age', 'Sex', 'Job', 'Housing', 'Saving accounts', 'Checking account', 'Credit amount', 'Duration', 'Purpose']
+Imputing 'Unnamed: 0' (numeric, missing: 25.60%) using 'knn'
+Imputing 'Age' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Sex' (categorical, missing: 26.00%) using 'random_forest'
+Imputing 'Job' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Housing' (categorical, missing: 26.50%) using 'random_forest'
+Imputing 'Saving accounts' (categorical, missing: 41.40%) using 'random_forest'
+Imputing 'Checking account' (categorical, missing: 54.50%) using 'random_forest'
+Imputing 'Credit amount' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Duration' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Purpose' (categorical, missing: 24.90%) using 'random_forest'
+Imputation complete.
+Unnamed: 0                                     knn
+Age                                           mean
+Sex                 random_forest -> fallback:mode
+Job                                           mean
+Housing             random_forest -> fallback:mode
+Saving accounts     random_forest -> fallback:mode
+Checking account    random_forest -> fallback:mode
+Credit amount                                 mean
+Duration                                      mean
+Purpose             random_forest -> fallback:mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+Unnamed: 0: 72.6874
+Age: 2.2488
+Job: 0.1202
+Credit amount: 548.6872
+Duration: 2.8402
+
+=== Accuracy (%) per Categorical Column ===
+Sex: 68.08%
+Housing: 69.81%
+Saving accounts: 40.82%
+Checking account: 13.03%
+Purpose: 38.15%
+
+=== Mean values after imputation ===
+Unnamed: 0        499.3766
+Age                35.3252
+Job                 1.9150
+Credit amount    3397.2868
+Duration           21.4644
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'german_credit_data_0.3.txt'
+

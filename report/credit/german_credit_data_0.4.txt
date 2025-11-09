@@ -1,0 +1,53 @@
+=== Running Imputation Test for 'german_credit_data.csv' ===
+
+Loaded dataset: (1000, 10)
+Introduced missing values (~40.0% cells).
+Columns to impute: ['Unnamed: 0', 'Age', 'Sex', 'Job', 'Housing', 'Saving accounts', 'Checking account', 'Credit amount', 'Duration', 'Purpose']
+Imputing 'Unnamed: 0' (numeric, missing: 33.50%) using 'random_forest'
+Imputing 'Age' (numeric, missing: 30.70%) using 'random_forest'
+Imputing 'Sex' (categorical, missing: 33.90%) using 'random_forest'
+Imputing 'Job' (numeric, missing: 31.80%) using 'random_forest'
+Imputing 'Housing' (categorical, missing: 31.00%) using 'random_forest'
+Imputing 'Saving accounts' (categorical, missing: 47.00%) using 'random_forest'
+Imputing 'Checking account' (categorical, missing: 60.10%) using 'random_forest'
+Imputing 'Credit amount' (numeric, missing: 32.70%) using 'random_forest'
+Imputing 'Duration' (numeric, missing: 32.30%) using 'random_forest'
+Imputing 'Purpose' (categorical, missing: 32.90%) using 'random_forest'
+Imputation complete.
+Unnamed: 0          random_forest -> fallback:mean
+Age                 random_forest -> fallback:mean
+Sex                 random_forest -> fallback:mode
+Job                 random_forest -> fallback:mean
+Housing             random_forest -> fallback:mode
+Saving accounts     random_forest -> fallback:mode
+Checking account    random_forest -> fallback:mode
+Credit amount       random_forest -> fallback:mean
+Duration            random_forest -> fallback:mean
+Purpose             random_forest -> fallback:mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+Unnamed: 0: 82.9287
+Age: 2.6127
+Job: 0.1356
+Credit amount: 647.8859
+Duration: 2.9438
+
+=== Accuracy (%) per Categorical Column ===
+Sex: 69.91%
+Housing: 68.06%
+Saving accounts: 46.38%
+Checking account: 13.98%
+Purpose: 33.13%
+
+=== Mean values after imputation ===
+Unnamed: 0        487.493233
+Age                35.731602
+Job                 1.892962
+Credit amount    3215.598811
+Duration           20.995569
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'german_credit_data_0.4.txt'
+

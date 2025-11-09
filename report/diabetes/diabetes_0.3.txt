@@ -1,0 +1,55 @@
+=== Running Imputation Test for 'diabetes.csv' ===
+
+Loaded dataset: (768, 9)
+Introduced missing values (~30.0% cells).
+Columns to impute: ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
+Imputing 'Pregnancies' (numeric, missing: 26.17%) using 'knn'
+Imputing 'Glucose' (numeric, missing: 0.00%) using 'mean'
+Imputing 'BloodPressure' (numeric, missing: 0.00%) using 'mean'
+Imputing 'SkinThickness' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Insulin' (numeric, missing: 0.00%) using 'mean'
+Imputing 'BMI' (numeric, missing: 0.00%) using 'mean'
+Imputing 'DiabetesPedigreeFunction' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Age' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Outcome' (numeric, missing: 0.00%) using 'mean'
+Imputation complete.
+Pregnancies                  knn
+Glucose                     mean
+BloodPressure               mean
+SkinThickness               mean
+Insulin                     mean
+BMI                         mean
+DiabetesPedigreeFunction    mean
+Age                         mean
+Outcome                     mean
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+Pregnancies: 0.6802
+Glucose: 6.4906
+BloodPressure: 3.6661
+SkinThickness: 3.5807
+Insulin: 20.2029
+BMI: 1.9886
+DiabetesPedigreeFunction: 0.0549
+Age: 2.1185
+Outcome: 0.1104
+
+=== Accuracy (%) per Categorical Column ===
+No categorical columns found or no missing values introduced.
+
+=== Mean values after imputation ===
+Pregnancies                   4.178385
+Glucose                     120.405469
+BloodPressure                69.804948
+SkinThickness                20.780729
+Insulin                      79.987760
+BMI                          30.895156
+DiabetesPedigreeFunction      0.474989
+Age                          32.896354
+Outcome                       0.353646
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'diabetes_0.3.txt'
+

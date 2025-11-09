@@ -1,0 +1,67 @@
+=== Running Imputation Test for 'wine.csv' ===
+
+Loaded dataset: (1599, 12)
+Introduced missing values (~20.0% cells).
+Columns to impute: ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']
+Imputing 'fixed acidity' (numeric, missing: 18.39%) using 'knn'
+Imputing 'volatile acidity' (numeric, missing: 0.00%) using 'mean'
+Imputing 'citric acid' (numeric, missing: 0.00%) using 'mean'
+Imputing 'residual sugar' (numeric, missing: 0.00%) using 'mean'
+Imputing 'chlorides' (numeric, missing: 0.00%) using 'mean'
+Imputing 'free sulfur dioxide' (numeric, missing: 0.00%) using 'mean'
+Imputing 'total sulfur dioxide' (numeric, missing: 0.00%) using 'mean'
+Imputing 'density' (numeric, missing: 0.00%) using 'mean'
+Imputing 'pH' (numeric, missing: 0.00%) using 'mean'
+Imputing 'sulphates' (numeric, missing: 0.00%) using 'mean'
+Imputing 'alcohol' (numeric, missing: 0.00%) using 'mean'
+Imputing 'quality' (numeric, missing: 0.00%) using 'mean'
+Imputation complete.
+fixed acidity            knn
+volatile acidity        mean
+citric acid             mean
+residual sugar          mean
+chlorides               mean
+free sulfur dioxide     mean
+total sulfur dioxide    mean
+density                 mean
+pH                      mean
+sulphates               mean
+alcohol                 mean
+quality                 mean
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+fixed acidity: 0.1751
+volatile acidity: 0.0197
+citric acid: 0.0221
+residual sugar: 0.1399
+chlorides: 0.0035
+free sulfur dioxide: 1.5709
+total sulfur dioxide: 4.2673
+density: 0.0002
+pH: 0.0172
+sulphates: 0.0210
+alcohol: 0.1399
+quality: 0.1021
+
+=== Accuracy (%) per Categorical Column ===
+No categorical columns found or no missing values introduced.
+
+=== Mean values after imputation ===
+fixed acidity            8.316673
+volatile acidity         0.533443
+citric acid              0.262433
+residual sugar           2.523915
+chlorides                0.087295
+free sulfur dioxide     15.917261
+total sulfur dioxide    46.136210
+density                  0.996762
+pH                       3.312073
+sulphates                0.656474
+alcohol                 10.410271
+quality                  5.651282
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'wine_0.2.txt'
+

@@ -1,0 +1,53 @@
+=== Running Imputation Test for 'german_credit_data.csv' ===
+
+Loaded dataset: (1000, 10)
+Introduced missing values (~10.0% cells).
+Columns to impute: ['Unnamed: 0', 'Age', 'Sex', 'Job', 'Housing', 'Saving accounts', 'Checking account', 'Credit amount', 'Duration', 'Purpose']
+Imputing 'Unnamed: 0' (numeric, missing: 10.80%) using 'knn'
+Imputing 'Age' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Sex' (categorical, missing: 9.50%) using 'mode'
+Imputing 'Job' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Housing' (categorical, missing: 10.00%) using 'mode'
+Imputing 'Saving accounts' (categorical, missing: 26.00%) using 'random_forest'
+Imputing 'Checking account' (categorical, missing: 44.00%) using 'random_forest'
+Imputing 'Credit amount' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Duration' (numeric, missing: 0.00%) using 'mean'
+Imputing 'Purpose' (categorical, missing: 9.60%) using 'mode'
+Imputation complete.
+Unnamed: 0                                     knn
+Age                                           mean
+Sex                                           mode
+Job                                           mean
+Housing                                       mode
+Saving accounts     random_forest -> fallback:mode
+Checking account    random_forest -> fallback:mode
+Credit amount                                 mean
+Duration                                      mean
+Purpose                                       mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+Unnamed: 0: 27.7242
+Age: 0.8852
+Job: 0.0444
+Credit amount: 201.3912
+Duration: 1.0620
+
+=== Accuracy (%) per Categorical Column ===
+Sex: 69.47%
+Housing: 78.00%
+Saving accounts: 20.38%
+Checking account: 4.55%
+Purpose: 29.17%
+
+=== Mean values after imputation ===
+Unnamed: 0        496.4590
+Age                35.2796
+Job                 1.8892
+Credit amount    3217.1404
+Duration           20.4218
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'german_credit_data_0.1.txt'
+

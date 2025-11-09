@@ -1,0 +1,610 @@
+Loaded dataset: (11162, 17)
+Introduced missing values (≈10.0% cells).
+Columns to impute: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'deposit']
+Imputing 'age' (numeric, missing: 9.01%) using 'mean'
+Imputing 'job' (categorical, missing: 9.10%) using 'mode'
+Imputing 'marital' (categorical, missing: 9.34%) using 'mode'
+Imputing 'education' (categorical, missing: 9.59%) using 'mode'
+Imputing 'default' (categorical, missing: 9.60%) using 'mode'
+Imputing 'balance' (numeric, missing: 9.60%) using 'mean'
+Imputing 'housing' (categorical, missing: 9.55%) using 'mode'
+Imputing 'loan' (categorical, missing: 9.29%) using 'mode'
+Imputing 'contact' (categorical, missing: 9.64%) using 'mode'
+Imputing 'day' (numeric, missing: 9.65%) using 'mean'
+Imputing 'month' (categorical, missing: 9.44%) using 'mode'
+Imputing 'duration' (numeric, missing: 9.44%) using 'mean'
+Imputing 'campaign' (numeric, missing: 9.60%) using 'mean'
+Imputing 'pdays' (numeric, missing: 9.29%) using 'mean'
+Imputing 'previous' (numeric, missing: 9.70%) using 'mean'
+Imputing 'poutcome' (categorical, missing: 10.03%) using 'mode'
+Imputing 'deposit' (categorical, missing: 9.38%) using 'mode'
+Imputation complete.
+age          mean
+job          mode
+marital      mode
+education    mode
+default      mode
+balance      mean
+housing      mode
+loan         mode
+contact      mode
+day          mean
+month        mode
+duration     mean
+campaign     mean
+pdays        mean
+previous     mean
+poutcome     mode
+deposit      mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 0.9066
+balance: 150.1362
+day: 0.6956
+duration: 23.6331
+campaign: 0.1604
+pdays: 7.3906
+previous: 0.1244
+
+=== Accuracy (%) per Categorical Column ===
+job: 22.34%
+marital: 57.53%
+education: 47.85%
+default: 98.23%
+housing: 53.85%
+loan: 86.40%
+contact: 71.19%
+month: 26.57%
+poutcome: 74.53%
+deposit: 52.05%
+
+=== Mean values after imputation ===
+age           41.128003
+balance     1535.629274
+day           15.684581
+duration     373.706668
+campaign       2.496978
+pdays         50.976198
+previous       0.827860
+dtype: float64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loaded dataset: (11162, 17)
+Introduced missing values (≈20.0% cells).
+Columns to impute: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'deposit']
+Imputing 'age' (numeric, missing: 17.61%) using 'knn'
+Imputing 'job' (categorical, missing: 18.74%) using 'mode'
+Imputing 'marital' (categorical, missing: 17.58%) using 'mode'
+Imputing 'education' (categorical, missing: 18.84%) using 'mode'
+Imputing 'default' (categorical, missing: 17.96%) using 'mode'
+Imputing 'balance' (numeric, missing: 0.00%) using 'mean'
+Imputing 'housing' (categorical, missing: 18.17%) using 'mode'
+Imputing 'loan' (categorical, missing: 18.10%) using 'mode'
+Imputing 'contact' (categorical, missing: 18.45%) using 'mode'
+Imputing 'day' (numeric, missing: 0.00%) using 'mean'
+Imputing 'month' (categorical, missing: 17.89%) using 'mode'
+Imputing 'duration' (numeric, missing: 0.00%) using 'mean'
+Imputing 'campaign' (numeric, missing: 0.00%) using 'mean'
+Imputing 'pdays' (numeric, missing: 0.00%) using 'mean'
+Imputing 'previous' (numeric, missing: 0.00%) using 'mean'
+Imputing 'poutcome' (categorical, missing: 18.20%) using 'mode'
+Imputing 'deposit' (categorical, missing: 17.98%) using 'mode'
+Imputation complete.
+age           knn
+job          mode
+marital      mode
+education    mode
+default      mode
+balance      mean
+housing      mode
+loan         mode
+contact      mode
+day          mean
+month        mode
+duration     mean
+campaign     mean
+pdays        mean
+previous     mean
+poutcome     mode
+deposit      mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 1.7927
+balance: 293.2217
+day: 1.4169
+duration: 53.0753
+campaign: 0.2947
+pdays: 7.8407
+previous: 0.1514
+
+=== Accuracy (%) per Categorical Column ===
+job: 22.32%
+marital: 57.14%
+education: 48.41%
+default: 98.60%
+housing: 54.29%
+loan: 86.29%
+contact: 70.13%
+month: 24.94%
+poutcome: 74.02%
+deposit: 53.56%
+
+=== Mean values after imputation ===
+age           41.162552
+balance     1473.829600
+day           15.908260
+duration     384.562964
+campaign       2.476922
+pdays         47.214567
+previous       0.787404
+dtype: float64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loaded dataset: (11162, 17)
+Introduced missing values (≈30.0% cells).
+Columns to impute: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'deposit']
+Imputing 'age' (numeric, missing: 26.74%) using 'knn'
+Imputing 'job' (categorical, missing: 25.95%) using 'random_forest'
+Imputing 'marital' (categorical, missing: 25.23%) using 'random_forest'
+Imputing 'education' (categorical, missing: 25.80%) using 'random_forest'
+Imputing 'default' (categorical, missing: 26.29%) using 'random_forest'
+Imputing 'balance' (numeric, missing: 0.00%) using 'mean'
+Imputing 'housing' (categorical, missing: 25.30%) using 'random_forest'
+Imputing 'loan' (categorical, missing: 25.77%) using 'random_forest'
+Imputing 'contact' (categorical, missing: 26.22%) using 'random_forest'
+Imputing 'day' (numeric, missing: 0.00%) using 'mean'
+Imputing 'month' (categorical, missing: 26.07%) using 'random_forest'
+Imputing 'duration' (numeric, missing: 0.00%) using 'mean'
+Imputing 'campaign' (numeric, missing: 0.00%) using 'mean'
+Imputing 'pdays' (numeric, missing: 0.00%) using 'mean'
+Imputing 'previous' (numeric, missing: 0.00%) using 'mean'
+Imputing 'poutcome' (categorical, missing: 26.03%) using 'random_forest'
+Imputing 'deposit' (categorical, missing: 25.34%) using 'random_forest'
+Imputation complete.
+age                                     knn
+job          random_forest -> fallback:mode
+marital      random_forest -> fallback:mode
+education    random_forest -> fallback:mode
+default      random_forest -> fallback:mode
+balance                                mean
+housing      random_forest -> fallback:mode
+loan         random_forest -> fallback:mode
+contact      random_forest -> fallback:mode
+day                                    mean
+month        random_forest -> fallback:mode
+duration                               mean
+campaign                               mean
+pdays                                  mean
+previous                               mean
+poutcome     random_forest -> fallback:mode
+deposit      random_forest -> fallback:mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 2.8285
+balance: 475.5212
+day: 1.9511
+duration: 72.1854
+campaign: 0.5134
+pdays: 11.5698
+previous: 0.2145
+
+=== Accuracy (%) per Categorical Column ===
+job: 22.41%
+marital: 57.63%
+education: 48.96%
+default: 98.67%
+housing: 52.97%
+loan: 86.86%
+contact: 72.60%
+month: 24.50%
+poutcome: 75.94%
+deposit: 52.42%
+
+=== Mean values after imputation ===
+age           41.260813
+balance     1476.966028
+day           15.589285
+duration     380.686848
+campaign       2.615015
+pdays         48.172818
+previous       0.748791
+dtype: float64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loaded dataset: (11162, 17)
+Introduced missing values (≈40.0% cells).
+Columns to impute: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'deposit']
+Imputing 'age' (numeric, missing: 33.94%) using 'random_forest'
+Imputing 'job' (categorical, missing: 33.31%) using 'random_forest'
+Imputing 'marital' (categorical, missing: 32.23%) using 'random_forest'
+Imputing 'education' (categorical, missing: 32.76%) using 'random_forest'
+Imputing 'default' (categorical, missing: 33.86%) using 'random_forest'
+Imputing 'balance' (numeric, missing: 32.65%) using 'random_forest'
+Imputing 'housing' (categorical, missing: 32.66%) using 'random_forest'
+Imputing 'loan' (categorical, missing: 33.27%) using 'random_forest'
+Imputing 'contact' (categorical, missing: 32.56%) using 'random_forest'
+Imputing 'day' (numeric, missing: 32.80%) using 'random_forest'
+Imputing 'month' (categorical, missing: 33.10%) using 'random_forest'
+Imputing 'duration' (numeric, missing: 33.47%) using 'random_forest'
+Imputing 'campaign' (numeric, missing: 33.35%) using 'random_forest'
+Imputing 'pdays' (numeric, missing: 33.26%) using 'random_forest'
+Imputing 'previous' (numeric, missing: 32.45%) using 'random_forest'
+Imputing 'poutcome' (categorical, missing: 33.33%) using 'random_forest'
+Imputing 'deposit' (categorical, missing: 32.45%) using 'random_forest'
+Imputation complete.
+age          random_forest -> fallback:mean
+job          random_forest -> fallback:mode
+marital      random_forest -> fallback:mode
+education    random_forest -> fallback:mode
+default      random_forest -> fallback:mode
+balance      random_forest -> fallback:mean
+housing      random_forest -> fallback:mode
+loan         random_forest -> fallback:mode
+contact      random_forest -> fallback:mode
+day          random_forest -> fallback:mean
+month        random_forest -> fallback:mode
+duration     random_forest -> fallback:mean
+campaign     random_forest -> fallback:mean
+pdays        random_forest -> fallback:mean
+previous     random_forest -> fallback:mean
+poutcome     random_forest -> fallback:mode
+deposit      random_forest -> fallback:mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 3.2842
+balance: 545.9946
+day: 2.3579
+duration: 84.6497
+campaign: 0.5223
+pdays: 25.8504
+previous: 0.4004
+
+=== Accuracy (%) per Categorical Column ===
+job: 22.86%
+marital: 56.88%
+education: 48.62%
+default: 98.44%
+housing: 53.21%
+loan: 87.29%
+contact: 72.65%
+month: 25.58%
+poutcome: 74.09%
+deposit: 51.91%
+
+=== Mean values after imputation ===
+age           41.251288
+balance     1526.635009
+day           15.594454
+duration     373.056154
+campaign       2.522984
+pdays         52.125369
+previous       0.842175
+dtype: float64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loaded dataset: (11162, 17)
+Introduced missing values (≈50.0% cells).
+Columns to impute: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'deposit']
+Imputing 'age' (numeric, missing: 39.80%) using 'random_forest'
+Imputing 'job' (categorical, missing: 39.63%) using 'random_forest'
+Imputing 'marital' (categorical, missing: 38.83%) using 'random_forest'
+Imputing 'education' (categorical, missing: 39.07%) using 'random_forest'
+Imputing 'default' (categorical, missing: 39.24%) using 'random_forest'
+Imputing 'balance' (numeric, missing: 39.42%) using 'random_forest'
+Imputing 'housing' (categorical, missing: 39.11%) using 'random_forest'
+Imputing 'loan' (categorical, missing: 38.94%) using 'random_forest'
+Imputing 'contact' (categorical, missing: 38.73%) using 'random_forest'
+Imputing 'day' (numeric, missing: 38.94%) using 'random_forest'
+Imputing 'month' (categorical, missing: 39.20%) using 'random_forest'
+Imputing 'duration' (numeric, missing: 39.29%) using 'random_forest'
+Imputing 'campaign' (numeric, missing: 39.63%) using 'random_forest'
+Imputing 'pdays' (numeric, missing: 40.00%) using 'random_forest'
+Imputing 'previous' (numeric, missing: 39.41%) using 'random_forest'
+Imputing 'poutcome' (categorical, missing: 39.91%) using 'random_forest'
+Imputing 'deposit' (categorical, missing: 39.34%) using 'random_forest'
+Imputation complete.
+age          random_forest -> fallback:mean
+job          random_forest -> fallback:mode
+marital      random_forest -> fallback:mode
+education    random_forest -> fallback:mode
+default      random_forest -> fallback:mode
+balance      random_forest -> fallback:mean
+housing      random_forest -> fallback:mode
+loan         random_forest -> fallback:mode
+contact      random_forest -> fallback:mode
+day          random_forest -> fallback:mean
+month        random_forest -> fallback:mode
+duration     random_forest -> fallback:mean
+campaign     random_forest -> fallback:mean
+pdays        random_forest -> fallback:mean
+previous     random_forest -> fallback:mean
+poutcome     random_forest -> fallback:mode
+deposit      random_forest -> fallback:mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 3.8292
+balance: 653.0659
+day: 2.7692
+duration: 99.1076
+campaign: 0.6199
+pdays: 31.3946
+previous: 0.4913
+
+=== Accuracy (%) per Categorical Column ===
+job: 22.54%
+marital: 56.97%
+education: 49.30%
+default: 98.58%
+housing: 52.27%
+loan: 86.77%
+contact: 72.61%
+month: 25.76%
+poutcome: 74.90%
+deposit: 53.18%
+
+=== Mean values after imputation ===
+age           41.144048
+balance     1525.879474
+day           15.602259
+duration     370.938468
+campaign       2.515583
+pdays         51.857250
+previous       0.833802
+dtype: float64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loaded dataset: (11162, 17)
+Introduced missing values (≈60.0% cells).
+Columns to impute: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'deposit']
+Imputing 'age' (numeric, missing: 45.22%) using 'random_forest'
+Imputing 'job' (categorical, missing: 45.35%) using 'random_forest'
+Imputing 'marital' (categorical, missing: 45.11%) using 'random_forest'
+Imputing 'education' (categorical, missing: 44.88%) using 'random_forest'
+Imputing 'default' (categorical, missing: 45.58%) using 'random_forest'
+Imputing 'balance' (numeric, missing: 45.17%) using 'random_forest'
+Imputing 'housing' (categorical, missing: 44.78%) using 'random_forest'
+Imputing 'loan' (categorical, missing: 44.73%) using 'random_forest'
+Imputing 'contact' (categorical, missing: 44.64%) using 'random_forest'
+Imputing 'day' (numeric, missing: 44.50%) using 'random_forest'
+Imputing 'month' (categorical, missing: 45.42%) using 'random_forest'
+Imputing 'duration' (numeric, missing: 45.58%) using 'random_forest'
+Imputing 'campaign' (numeric, missing: 44.62%) using 'random_forest'
+Imputing 'pdays' (numeric, missing: 45.84%) using 'random_forest'
+Imputing 'previous' (numeric, missing: 44.87%) using 'random_forest'
+Imputing 'poutcome' (categorical, missing: 45.41%) using 'random_forest'
+Imputing 'deposit' (categorical, missing: 44.73%) using 'random_forest'
+Imputation complete.
+age          random_forest -> fallback:mean
+job          random_forest -> fallback:mode
+marital      random_forest -> fallback:mode
+education    random_forest -> fallback:mode
+default      random_forest -> fallback:mode
+balance      random_forest -> fallback:mean
+housing      random_forest -> fallback:mode
+loan         random_forest -> fallback:mode
+contact      random_forest -> fallback:mode
+day          random_forest -> fallback:mean
+month        random_forest -> fallback:mode
+duration     random_forest -> fallback:mean
+campaign     random_forest -> fallback:mean
+pdays        random_forest -> fallback:mean
+previous     random_forest -> fallback:mean
+poutcome     random_forest -> fallback:mode
+deposit      random_forest -> fallback:mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 4.3701
+balance: 754.4387
+day: 3.1813
+duration: 114.4424
+campaign: 0.7061
+pdays: 36.0024
+previous: 0.5505
+
+=== Accuracy (%) per Categorical Column ===
+job: 23.33%
+marital: 56.37%
+education: 48.89%
+default: 98.39%
+housing: 52.78%
+loan: 87.08%
+contact: 72.57%
+month: 25.46%
+poutcome: 74.79%
+deposit: 52.83%
+
+=== Mean values after imputation ===
+age           41.268891
+balance     1522.531863
+day           15.764810
+duration     370.865492
+campaign       2.523940
+pdays         50.656079
+previous       0.858304
+dtype: float64
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loaded dataset: (11162, 17)
+Introduced missing values (≈70.0% cells).
+Columns to impute: ['age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'deposit']
+Imputing 'age' (numeric, missing: 50.45%) using 'random_forest'
+Imputing 'job' (categorical, missing: 51.44%) using 'random_forest'
+Imputing 'marital' (categorical, missing: 49.84%) using 'random_forest'
+Imputing 'education' (categorical, missing: 50.25%) using 'random_forest'
+Imputing 'default' (categorical, missing: 50.42%) using 'random_forest'
+Imputing 'balance' (numeric, missing: 50.16%) using 'random_forest'
+Imputing 'housing' (categorical, missing: 50.56%) using 'random_forest'
+Imputing 'loan' (categorical, missing: 50.39%) using 'random_forest'
+Imputing 'contact' (categorical, missing: 50.09%) using 'random_forest'
+Imputing 'day' (numeric, missing: 50.04%) using 'random_forest'
+Imputing 'month' (categorical, missing: 50.25%) using 'random_forest'
+Imputing 'duration' (numeric, missing: 50.03%) using 'random_forest'
+Imputing 'campaign' (numeric, missing: 49.85%) using 'random_forest'
+Imputing 'pdays' (numeric, missing: 50.28%) using 'random_forest'
+Imputing 'previous' (numeric, missing: 50.55%) using 'random_forest'
+Imputing 'poutcome' (categorical, missing: 51.02%) using 'random_forest'
+Imputing 'deposit' (categorical, missing: 50.12%) using 'random_forest'
+Imputation complete.
+age          random_forest -> fallback:mean
+job          random_forest -> fallback:mode
+marital      random_forest -> fallback:mode
+education    random_forest -> fallback:mode
+default      random_forest -> fallback:mode
+balance      random_forest -> fallback:mean
+housing      random_forest -> fallback:mode
+loan         random_forest -> fallback:mode
+contact      random_forest -> fallback:mode
+day          random_forest -> fallback:mean
+month        random_forest -> fallback:mode
+duration     random_forest -> fallback:mean
+campaign     random_forest -> fallback:mean
+pdays        random_forest -> fallback:mean
+previous     random_forest -> fallback:mean
+poutcome     random_forest -> fallback:mode
+deposit      random_forest -> fallback:mode
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 4.8665
+balance: 834.7403
+day: 3.5859
+duration: 128.1875
+campaign: 0.7869
+pdays: 39.6937
+previous: 0.6269
+
+=== Accuracy (%) per Categorical Column ===
+job: 23.16%
+marital: 57.40%
+education: 49.06%
+default: 98.35%
+housing: 53.01%
+loan: 87.27%
+contact: 71.62%
+month: 25.89%
+poutcome: 74.80%
+deposit: 53.13%
+
+=== Mean values after imputation ===
+age           41.375701
+balance     1512.453173
+day           15.808824
+duration     373.901578
+campaign       2.528582
+pdays         52.554054
+previous       0.825543
+dtype: float64

@@ -1,0 +1,71 @@
+=== Running Imputation Test for 'heart.csv' ===
+
+Loaded dataset: (299, 13)
+Introduced missing values (~40.0% cells).
+Columns to impute: ['age', 'anaemia', 'creatinine_phosphokinase', 'diabetes', 'ejection_fraction', 'high_blood_pressure', 'platelets', 'serum_creatinine', 'serum_sodium', 'sex', 'smoking', 'time', 'DEATH_EVENT']
+Imputing 'age' (numeric, missing: 29.10%) using 'knn'
+Imputing 'anaemia' (numeric, missing: 0.00%) using 'mean'
+Imputing 'creatinine_phosphokinase' (numeric, missing: 0.00%) using 'mean'
+Imputing 'diabetes' (numeric, missing: 0.00%) using 'mean'
+Imputing 'ejection_fraction' (numeric, missing: 0.00%) using 'mean'
+Imputing 'high_blood_pressure' (numeric, missing: 0.00%) using 'mean'
+Imputing 'platelets' (numeric, missing: 0.00%) using 'mean'
+Imputing 'serum_creatinine' (numeric, missing: 0.00%) using 'mean'
+Imputing 'serum_sodium' (numeric, missing: 0.00%) using 'mean'
+Imputing 'sex' (numeric, missing: 0.00%) using 'mean'
+Imputing 'smoking' (numeric, missing: 0.00%) using 'mean'
+Imputing 'time' (numeric, missing: 0.00%) using 'mean'
+Imputing 'DEATH_EVENT' (numeric, missing: 0.00%) using 'mean'
+Imputation complete.
+age                          knn
+anaemia                     mean
+creatinine_phosphokinase    mean
+diabetes                    mean
+ejection_fraction           mean
+high_blood_pressure         mean
+platelets                   mean
+serum_creatinine            mean
+serum_sodium                mean
+sex                         mean
+smoking                     mean
+time                        mean
+DEATH_EVENT                 mean
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 3.1387
+anaemia: 0.1672
+creatinine_phosphokinase: 243.4515
+diabetes: 0.1753
+ejection_fraction: 4.0736
+high_blood_pressure: 0.1572
+platelets: 25832.3753
+serum_creatinine: 0.2229
+serum_sodium: 1.3224
+sex: 0.1418
+smoking: 0.1137
+time: 25.7492
+DEATH_EVENT: 0.1385
+
+=== Accuracy (%) per Categorical Column ===
+No categorical columns found or no missing values introduced.
+
+=== Mean values after imputation ===
+age                             60.841696
+anaemia                          0.397993
+creatinine_phosphokinase       529.076923
+diabetes                         0.407358
+ejection_fraction               37.885619
+high_blood_pressure              0.406689
+platelets                   268709.476415
+serum_creatinine                 1.373318
+serum_sodium                   137.121070
+sex                              0.642140
+smoking                          0.318395
+time                           127.912375
+DEATH_EVENT                      0.336455
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'heart_0.4.txt'
+

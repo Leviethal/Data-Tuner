@@ -1,0 +1,71 @@
+=== Running Imputation Test for 'heart.csv' ===
+
+Loaded dataset: (299, 13)
+Introduced missing values (~60.0% cells).
+Columns to impute: ['age', 'anaemia', 'creatinine_phosphokinase', 'diabetes', 'ejection_fraction', 'high_blood_pressure', 'platelets', 'serum_creatinine', 'serum_sodium', 'sex', 'smoking', 'time', 'DEATH_EVENT']
+Imputing 'age' (numeric, missing: 47.16%) using 'random_forest'
+Imputing 'anaemia' (numeric, missing: 42.81%) using 'random_forest'
+Imputing 'creatinine_phosphokinase' (numeric, missing: 44.82%) using 'random_forest'
+Imputing 'diabetes' (numeric, missing: 42.47%) using 'random_forest'
+Imputing 'ejection_fraction' (numeric, missing: 46.49%) using 'random_forest'
+Imputing 'high_blood_pressure' (numeric, missing: 43.14%) using 'random_forest'
+Imputing 'platelets' (numeric, missing: 41.47%) using 'random_forest'
+Imputing 'serum_creatinine' (numeric, missing: 43.14%) using 'random_forest'
+Imputing 'serum_sodium' (numeric, missing: 43.48%) using 'random_forest'
+Imputing 'sex' (numeric, missing: 40.13%) using 'random_forest'
+Imputing 'smoking' (numeric, missing: 44.48%) using 'random_forest'
+Imputing 'time' (numeric, missing: 46.82%) using 'random_forest'
+Imputing 'DEATH_EVENT' (numeric, missing: 45.15%) using 'random_forest'
+Imputation complete.
+age                         random_forest -> fallback:mean
+anaemia                     random_forest -> fallback:mean
+creatinine_phosphokinase    random_forest -> fallback:mean
+diabetes                    random_forest -> fallback:mean
+ejection_fraction           random_forest -> fallback:mean
+high_blood_pressure         random_forest -> fallback:mean
+platelets                   random_forest -> fallback:mean
+serum_creatinine            random_forest -> fallback:mean
+serum_sodium                random_forest -> fallback:mean
+sex                         random_forest -> fallback:mean
+smoking                     random_forest -> fallback:mean
+time                        random_forest -> fallback:mean
+DEATH_EVENT                 random_forest -> fallback:mean
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+age: 4.5115
+anaemia: 0.2100
+creatinine_phosphokinase: 226.3674
+diabetes: 0.2067
+ejection_fraction: 4.4734
+high_blood_pressure: 0.1975
+platelets: 27464.1450
+serum_creatinine: 0.2503
+serum_sodium: 1.3193
+sex: 0.1836
+smoking: 0.1936
+time: 31.9503
+DEATH_EVENT: 0.1966
+
+=== Accuracy (%) per Categorical Column ===
+No categorical columns found or no missing values introduced.
+
+=== Mean values after imputation ===
+age                             61.331228
+anaemia                          0.444444
+creatinine_phosphokinase       574.648485
+diabetes                         0.418605
+ejection_fraction               37.450000
+high_blood_pressure              0.335294
+platelets                   269834.928114
+serum_creatinine                 1.393529
+serum_sodium                   136.313609
+sex                              0.659218
+smoking                          0.331325
+time                           131.339623
+DEATH_EVENT                      0.329268
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'heart_0.6.txt'
+

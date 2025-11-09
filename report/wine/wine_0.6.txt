@@ -1,0 +1,67 @@
+=== Running Imputation Test for 'wine.csv' ===
+
+Loaded dataset: (1599, 12)
+Introduced missing values (~60.0% cells).
+Columns to impute: ['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']
+Imputing 'fixed acidity' (numeric, missing: 45.03%) using 'random_forest'
+Imputing 'volatile acidity' (numeric, missing: 45.47%) using 'random_forest'
+Imputing 'citric acid' (numeric, missing: 45.15%) using 'random_forest'
+Imputing 'residual sugar' (numeric, missing: 45.22%) using 'random_forest'
+Imputing 'chlorides' (numeric, missing: 45.97%) using 'random_forest'
+Imputing 'free sulfur dioxide' (numeric, missing: 45.34%) using 'random_forest'
+Imputing 'total sulfur dioxide' (numeric, missing: 45.90%) using 'random_forest'
+Imputing 'density' (numeric, missing: 46.72%) using 'random_forest'
+Imputing 'pH' (numeric, missing: 43.84%) using 'random_forest'
+Imputing 'sulphates' (numeric, missing: 45.15%) using 'random_forest'
+Imputing 'alcohol' (numeric, missing: 42.53%) using 'random_forest'
+Imputing 'quality' (numeric, missing: 45.34%) using 'random_forest'
+Imputation complete.
+fixed acidity           random_forest -> fallback:mean
+volatile acidity        random_forest -> fallback:mean
+citric acid             random_forest -> fallback:mean
+residual sugar          random_forest -> fallback:mean
+chlorides               random_forest -> fallback:mean
+free sulfur dioxide     random_forest -> fallback:mean
+total sulfur dioxide    random_forest -> fallback:mean
+density                 random_forest -> fallback:mean
+pH                      random_forest -> fallback:mean
+sulphates               random_forest -> fallback:mean
+alcohol                 random_forest -> fallback:mean
+quality                 random_forest -> fallback:mean
+Name: Strategy Used, dtype: object
+
+=== Mean Absolute Error (MAE) per Numeric Column ===
+fixed acidity: 0.6376
+volatile acidity: 0.0635
+citric acid: 0.0756
+residual sugar: 0.3570
+chlorides: 0.0095
+free sulfur dioxide: 3.8062
+total sulfur dioxide: 11.6855
+density: 0.0006
+pH: 0.0543
+sulphates: 0.0587
+alcohol: 0.3742
+quality: 0.3129
+
+=== Accuracy (%) per Categorical Column ===
+No categorical columns found or no missing values introduced.
+
+=== Mean values after imputation ===
+fixed acidity            8.291581
+volatile acidity         0.522655
+citric acid              0.269065
+residual sugar           2.502340
+chlorides                0.087520
+free sulfur dioxide     15.736842
+total sulfur dioxide    46.232948
+density                  0.996749
+pH                       3.313586
+sulphates                0.650855
+alcohol                 10.396645
+quality                  5.639588
+dtype: float64
+
+✓ Saved imputed dataset to 'bank_new.csv'
+✓ Results saved to 'wine_0.6.txt'
+

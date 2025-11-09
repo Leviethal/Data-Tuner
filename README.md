@@ -62,15 +62,13 @@ The **kNN imputation method** provides higher fidelity (high L10/L25) and lower 
 ## Table of Contents
 
 1. [Project overview](#project-overview)
-2. [Repository structure](#repository-structure)
-3. [Quickstart](#quickstart)
-4. [API reference (core)](#api-reference-core)
-5. [How it works (high level)](#how-it-works-high-level)
-6. [Evaluation methodology](#evaluation-methodology)
-7. [Design choices, limitations & caveats](#design-choices-limitations--caveats)
-8. [Suggested improvements / future work](#suggested-improvements--future-work)
-9. [Development / testing / reproducibility](#development--testing--reproducibility)
-10. [License & contact](#license--contact)
+2. [Quickstart](#quickstart)
+3. [API reference (core)](#api-reference-core)
+4. [How it works (high level)](#how-it-works-high-level)
+5. [Evaluation methodology](#evaluation-methodology)
+6. [Design choices, limitations & caveats](#design-choices-limitations--caveats)
+7. [Suggested improvements / future work](#suggested-improvements--future-work)
+8. [Development / testing / reproducibility](#development--testing--reproducibility)
 
 ---
 
@@ -149,7 +147,8 @@ The `auto` decision is deterministic and based on column type and missing-rate:
 * **Numeric columns**
 
   * missing < 10% → `"mean"`
-  * 10% ≤ missing < 30% → `"knn"`
+  * 10% ≤ missing < 25% → `"median"`
+  * 25% ≤ missing < 40% → `"knn"`
   * missing ≥ 30% → `"random_forest"`
 * **Categorical columns**
 
@@ -185,10 +184,7 @@ The `auto` decision is deterministic and based on column type and missing-rate:
 3. Run `universal_imputer(..., model="auto")`.
 4. For numeric columns, compute:
 
-   * **MSE** — mean squared error on the positions that were set to NaN
    * **MAE** — mean absolute error on those positions
-   * **RMAE** — normalized MAE (`mae / mean(|y_true|)`) to compare across features
-5. Save results and datasets to `imputer_outputs/`.
 
 This method measures **imputation quality relative to known ground truth** (strong evaluation setting because injected missingness is MCAR-like). See `imputing.ipynb` for extended experiments and comparisons (kept separate).
 

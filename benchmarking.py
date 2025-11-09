@@ -91,4 +91,4 @@ if __name__ == "__main__":
 
     # Step 6: Save the imputed CSV
     df_imputed.to_csv(OUTPUT_CSV, index=False)
-    print(f"\n✓ Saved imputed dataset to '{OUTPUT_CSV}'")
+    print(f"\n Saved imputed dataset to '{OUTPUT_CSV}'")

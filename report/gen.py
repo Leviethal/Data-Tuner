@@ -3,10 +3,10 @@ import re
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Use current folder (report/) instead of looking for "report" inside it
+
 ROOT = "."
 
-# Create main image output folder if not exists
+
 os.makedirs("../report_img", exist_ok=True)
 
 def parse_file(path):
@@ -61,11 +61,10 @@ def process_dataset(dataset_folder):
         missing, mae, acc, norm = parse_file(path)
         missing_percent = int(missing * 100)
 
-        # ✅ Output saved to: ../report_img/<dataset>/<missing>/
         out_dir = os.path.join("..", "report_img", dataset_name, f"{missing}")
         os.makedirs(out_dir, exist_ok=True)
 
-        # ---- Create Combined Plot ----
+       
         fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 
         # ---- Plot MAE ----
@@ -103,7 +102,7 @@ def process_dataset(dataset_folder):
         plt.savefig(save_path, bbox_inches="tight", dpi=300)
         plt.close()
 
-        print(f"✅ Saved: {save_path}")
+        print(f"Saved: {save_path}")
 
 
 def main():

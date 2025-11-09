@@ -1,9 +1,9 @@
 import pandas as pd
 from univ_imputer import universal_imputer
 
-INPUT_CSV = ""
-COLUMNS_TO_IMPUTE = []
-OUTPUT_CSV = ""
+INPUT_CSV = "data.csv"
+COLUMNS_TO_IMPUTE = ['LotFrontage']
+OUTPUT_CSV = "data_imputed.csv"
 STRATEGY = "auto"
 if __name__ == "__main__":
     

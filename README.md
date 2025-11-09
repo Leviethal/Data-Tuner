@@ -1,4 +1,4 @@
-# 📊 Comparison of Missing Data Imputation Techniques
+# Comparison of Missing Data Imputation Techniques
 
 This report summarizes the findings from the evaluation of **statistical (Mean, Median)** and **machine learning-based (kNN)** imputation techniques under different levels of missing data.  
 The performance was analyzed using **MAE (Mean Absolute Error)**, **L10**, **L25**, and **NOx Regression MSE** metrics.
@@ -7,17 +7,17 @@ The performance was analyzed using **MAE (Mean Absolute Error)**, **L10**, **L25
 
 ## 🔹 1. Results from MAE, L10, and L25 Plots
 
-### **MAE Trends**
+### **MAE Trends** (The lower the better)
 - **Mean** and **Median** imputations show **almost constant MAE** across all levels of missingness, indicating that they are not sensitive to the proportion of missing data.  
 - **kNN imputations (k=3, 5, 10)** yield **lower MAE** at low missingness levels (<10%) but MAE gradually increases as more data becomes missing.  
 - Among kNN variants, **k=10 performs slightly better** at higher missingness (>50%).
 
-### **L10 Performance**
+### **L10 Performance** (The higher the better)
 - **kNN methods** achieve **L10 > 90%** at low missingness (<10%), meaning most imputed values are highly accurate.  
 - As missingness increases, **L10 decreases sharply**, reflecting reduced precision in imputation.  
 - **Mean** and **Median** have consistently low and flat L10 scores (~40–50%), showing less sensitivity but lower accuracy overall.
 
-### **L25 Performance**
+### **L25 Performance** (The higher the better)
 - All **kNN variants** achieve **L25 ≈ 99%** at low missingness, indicating that nearly all imputations are within acceptable error bounds.  
 - L25 gradually decreases as missingness increases, but **kNN(10)** performs best, followed by **kNN(5)** and **kNN(3)**.  
 - **Mean** and **Median** remain constant (~75–78%), showing stability but relatively low performance.
@@ -42,12 +42,6 @@ The performance was analyzed using **MAE (Mean Absolute Error)**, **L10**, **L25
 
 ---
 
-## 🔹 3. Overall Summary
-
-| Missingness Level | Recommended Method | Reason |
-|--------------------|--------------------|--------|
-| ≤ 10% | **Mean or Median Imputation** | Simple, efficient, and sufficient at low missingness. |
-| ≥ 20% | **kNN (k=5 or k=10)** | Provides higher accuracy, lower MAE/MSE, and better stability. |
 
 **Conclusion:**  
 The **kNN imputation method** provides higher fidelity (high L10/L25) and lower prediction error (MSE), making it an ideal choice for handling **real-world datasets with moderate to high missingness**.
@@ -185,6 +179,9 @@ The `auto` decision is deterministic and based on column type and missing-rate:
 4. For numeric columns, compute:
 
    * **MAE** — mean absolute error on those positions
+5. For numeric columns, compute:
+
+   * **Accuracy** — Correctly predicted values / Total number of predicted values
 
 This method measures **imputation quality relative to known ground truth** (strong evaluation setting because injected missingness is MCAR-like). See `imputing.ipynb` for extended experiments and comparisons (kept separate).
 
